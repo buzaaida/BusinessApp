@@ -2,8 +2,8 @@
 package com.app.employee;
 
 import com.app.department.DepartmentEmployee;
-import com.app.entity.Job;
-import com.app.entity.Salary;
+import com.app.job.Job;
+import com.app.salary.Salary;
 import com.app.user.User;
 import java.io.Serializable;
 import java.util.Date;
