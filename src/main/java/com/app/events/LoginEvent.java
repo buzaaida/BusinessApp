@@ -3,8 +3,8 @@ package com.app.events;
 
 import com.app.commons.constants.Constants;
 import com.app.controller.Controller;
-import com.app.entity.Level;
-import com.app.entity.User;
+import com.app.level.Level;
+import com.app.user.User;
 import com.app.gui.LoginView;
 import com.app.gui.admin.AdminView;
 import com.app.gui.user.UserView;

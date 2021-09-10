@@ -1,7 +1,6 @@
 
 package com.app.level;
 
-import com.app.entity.Level;
 import com.app.gui.admin.AdminView;
 import com.app.gui.user.UserView;
 import javafx.scene.layout.Pane;

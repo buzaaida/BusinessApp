@@ -2,7 +2,6 @@
 package com.app.level;
 
 import com.app.commons.dao.JpaDao;
-import com.app.entity.Level;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

@@ -1,8 +1,8 @@
 package com.app.gui.admin;
 
 import com.app.controller.Controller;
-import com.app.entity.Level;
-import com.app.entity.User;
+import com.app.level.Level;
+import com.app.user.User;
 import com.app.level.LevelJpaDao;
 import com.app.user.UserJpaDao;
 import java.util.List;

@@ -5,6 +5,7 @@
  */
 package com.app.entity;
 
+import com.app.employee.Employee;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;

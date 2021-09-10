@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.app.entity;
+package com.app.department;
 
+import com.app.department.Department;
+import com.app.employee.Employee;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;

@@ -1,6 +1,9 @@
 
-package com.app.entity;
+package com.app.user;
 
+import com.app.employee.Employee;
+import com.app.employee.Employee;
+import com.app.level.Level;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;

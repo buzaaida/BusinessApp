@@ -26,10 +26,12 @@ public class AdminView extends BorderPane {
         userAdminView=new UserAdminView();
         setCenter(userAdminView);
         
-        ToggleGroup toggleGroup=new ToggleGroup();
+        ToggleGroup toggleGroup = new ToggleGroup();
         usersButton.setToggleGroup(toggleGroup);
         usersButton.setSelected(true);
+        usersButton.setOnAction(this::onUsersButtonClick);
         departmentsButton.setToggleGroup(toggleGroup);
+        departmentsButton.setOnAction(this::onDepartmentsButtonClick);
         
         HBox choiceBox=new HBox();
         choiceBox.setSpacing(5);

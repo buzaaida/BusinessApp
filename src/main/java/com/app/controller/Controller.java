@@ -1,7 +1,7 @@
 
 package com.app.controller;
 
-import com.app.entity.User;
+import com.app.user.User;
 import com.app.events.Events;
 import com.app.gui.LoginView;
 import com.app.gui.admin.AdminView;
