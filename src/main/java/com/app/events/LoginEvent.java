@@ -13,6 +13,7 @@ import com.app.user.UserJpaDao;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
 
 
@@ -24,15 +25,20 @@ public class LoginEvent implements EventHandler<ActionEvent> {
         LoginView loginView = Controller.instance().getLoginView();
         String username = loginView.getUsername();
         String password = loginView.getPassword();
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         if (username.isEmpty() || password.isEmpty()) {
-            loginView.setMessage(Constants.EMPTY_USERNAME_AND_OR_PASSWORD);
+            //loginView.setMessage(Constants.EMPTY_USERNAME_AND_OR_PASSWORD);
+            alert.setContentText(Constants.EMPTY_USERNAME_AND_OR_PASSWORD);
+            alert.show();
             return;
         }
         UserJpaDao userJpaDao = new UserJpaDao();
         User user = userJpaDao.login(username, password);
         Controller.instance().setLoggedUser(user);
         if (user == null) {
-            loginView.setMessage(Constants.WRONG_USERNAME_AND_OR_PASSWORD);
+            //loginView.setMessage(Constants.WRONG_USERNAME_AND_OR_PASSWORD);
+            alert.setContentText(Constants.WRONG_USERNAME_AND_OR_PASSWORD);
+            alert.show();
             return;
         }
         

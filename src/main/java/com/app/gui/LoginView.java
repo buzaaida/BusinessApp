@@ -22,7 +22,7 @@ public class LoginView extends GridPane {
     private final PasswordField passwordField=new PasswordField();
     private final Button loginButton=new Button("Login");
     private final Button cancelButton=new Button("Cancel");
-    private final Label messageLabel=new Label("Message");
+    //private final Label messageLabel=new Label("Message");
     
     public LoginView() {
         setHgap(10);
@@ -44,9 +44,10 @@ public class LoginView extends GridPane {
         
         
         add(buttonFlowPane, 1, 2);
-        add(messageLabel, 1, 3);
+        //add(messageLabel, 1, 3);
         
         Events events=Controller.instance().getEvents();
+        loginButton.setDefaultButton(true);
         loginButton.setOnAction(events.getLoginEvent());
         cancelButton.setOnAction(events.getCancelEvent());
         
@@ -60,7 +61,7 @@ public class LoginView extends GridPane {
         return passwordField.getText();
     }
 
-    public void setMessage(String message) {
+    /*public void setMessage(String message) {
         Optional.ofNullable(message).ifPresent(it->messageLabel.setText(it));
-    }
+    }*/
 }

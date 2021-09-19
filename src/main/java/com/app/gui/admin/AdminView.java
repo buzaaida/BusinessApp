@@ -17,10 +17,15 @@ public class AdminView extends BorderPane {
     
     private final ToggleButton usersButton=new ToggleButton("Users");
     private final ToggleButton departmentsButton=new ToggleButton("Departments");
+    private final ToggleButton jobsButton=new ToggleButton("Jobs");
+    private final ToggleButton salaryButoon=new ToggleButton("Salaries");
+
     private final Button logoutButton=new Button("Logout");
     
     private UserAdminView userAdminView;
     private DepartmentAdminView departmentAdminView;
+    private JobAdminView jobAdminView;
+    private SalaryAdminView salaryAdminView;
     
     public AdminView() {
         userAdminView=new UserAdminView();
@@ -32,11 +37,15 @@ public class AdminView extends BorderPane {
         usersButton.setOnAction(this::onUsersButtonClick);
         departmentsButton.setToggleGroup(toggleGroup);
         departmentsButton.setOnAction(this::onDepartmentsButtonClick);
+        jobsButton.setToggleGroup(toggleGroup);
+        jobsButton.setOnAction(this::onJobsButtonClick);
+        salaryButoon.setToggleGroup(toggleGroup);
+        salaryButoon.setOnAction(this::onSalaryButtonClick);
         
         HBox choiceBox=new HBox();
         choiceBox.setSpacing(5);
         choiceBox.setPadding(new Insets(10));
-        choiceBox.getChildren().addAll(usersButton, departmentsButton);
+        choiceBox.getChildren().addAll(usersButton, departmentsButton, jobsButton, salaryButoon);
         
         logoutButton.setText("Logout (" + Controller.instance().getLoggedUser()+")");
         logoutButton.setOnAction(Controller.instance().getEvents().getLogoutEvent());
@@ -60,6 +69,17 @@ public class AdminView extends BorderPane {
         departmentAdminView = new DepartmentAdminView();
         setCenter(departmentAdminView);
     }
+    
+    private void onJobsButtonClick(ActionEvent e){
+        jobAdminView = new JobAdminView();
+        setCenter(jobAdminView);
+    }
+    
+    private void onSalaryButtonClick(ActionEvent e){
+        salaryAdminView = new SalaryAdminView();
+        setCenter(salaryAdminView);
+    }
+    
 
     public UserAdminView getUserAdminView() {
         return userAdminView;
@@ -76,5 +96,23 @@ public class AdminView extends BorderPane {
     public void setDepartmentAdminView(DepartmentAdminView departmentAdminView) {
         this.departmentAdminView = departmentAdminView;
     }
+
+    public JobAdminView getJobAdminView() {
+        return jobAdminView;
+    }
+
+    public void setJobAdminView(JobAdminView jobAdminView) {
+        this.jobAdminView = jobAdminView;
+    }
+
+    public SalaryAdminView getSalaryAdminView() {
+        return salaryAdminView;
+    }
+
+    public void setSalaryAdminView(SalaryAdminView salaryAdminView) {
+        this.salaryAdminView = salaryAdminView;
+    }
+    
+    
     
 }

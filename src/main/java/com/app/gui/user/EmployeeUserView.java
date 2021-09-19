@@ -3,7 +3,6 @@ package com.app.gui.user;
 
 import com.app.employee.Employee;
 import com.app.employee.EmployeeJpaDao;
-import java.util.Date;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
